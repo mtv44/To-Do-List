@@ -1,0 +1,98 @@
+#checkboxText, button {
+    border-radius: 30px;
+    font-size: 20px; /* увеличенный размер шрифта */
+    border: 2px solid #008CBA;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px; /* увеличенные отступы */
+  }
+
+button:hover{
+    background-color: aqua;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-block: 50px;
+    width: 30%;
+}
+
+.ckeckboxs-list{
+    padding-block: 30px;
+    height: 40px;
+    width: 140;
+}
+.menu-button {
+    border-radius: 5px;
+    background-color:#9DDCDC; /* Цвет фона кнопки */
+    color: #333333; /* Цвет текста кнопки */
+    padding: 15px 20px; /* Отступы внутри кнопки */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Отключение стандартного подчеркивания ссылки */
+    width: 20; /* Ширина кнопки */
+    height: 20; 
+    font-size: 14px; /* Размер шрифта */
+    margin: 10px; /* Внешний отступ кнопки */
+    border: none; /* Удаление границы кнопки */
+}
+
+.menu-icon::after {
+        content: "\2630"; /*  */
+        padding-left: 8px; /* */
+        size: 20px;
+}
+.menu{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #FFEBB7;
+}
+.menu-item {
+    margin:auto; /* Отступы между элементами меню */
+}
+
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content{
+background-color:#FFEBB7;
+}
+
+.dropdown-content .href-page:focus {
+background-color: #bcac86;
+color: white;
+
+}
+
+.href-page:hover {
+background-color: #e1cea0;
+color: white;
+/* Другие стили */
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
