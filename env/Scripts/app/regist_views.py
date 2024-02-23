@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from app.models import db, User
+from app.models import User
+from . import db
 
 regist = Blueprint('main', __name__)
 

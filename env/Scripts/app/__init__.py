@@ -2,8 +2,10 @@ from flask import Flask
 from app.regist_views import regist
 from app.signin import auth
 from app.today_views import today_bp
-from app.models import db
+from flask_sqlalchemy import SQLAlchemy
 
+
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
