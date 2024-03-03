@@ -1,7 +1,7 @@
 # today_views.py
 from flask import Blueprint, render_template, request, redirect, url_for
 from app.models import User
-from . import db
+from app.models import db
 
 today_bp = Blueprint('today', __name__)
 

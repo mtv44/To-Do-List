@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from app.models import User
-from . import db
+from app.models import User, db
 
+    
 regist = Blueprint('main', __name__)
 
 @regist.route("/", methods=['GET', 'POST'])
