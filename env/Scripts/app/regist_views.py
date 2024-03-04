@@ -19,3 +19,4 @@ def registration_page():
 
     return render_template("registration.html")
 
+print(regist.name)
