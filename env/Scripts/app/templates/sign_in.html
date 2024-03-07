@@ -1,31 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="static\regist_style.css" rel="stylesheet">
-  <title>Регистрация</title>
-</head>
+{% extends "base.html" %}
+{% block title %}Войти{% endblock %}
+{% block content %}
 
 <body>
-  <div class="container">
-    <h2>Войти</h2>
-
-    <form id="sign_in_form" action="/sign_in" method="post">
+    <h2 class="display-4">Войти</h2>
+    <form id="sign_in_form" class="container" action="/sign_in" method="post">
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" autocomplete="off" required>
+        <input type="email" id="email" name="email" class="form-control" autocomplete="off" required>
       </div>
       <div class="form-group">
         <label for="login">Login:</label>
-        <input type="text" id="login" name="login" autocomplete="off" required>
+        <input type="text" id="login" name="login" class="form-control" autocomplete="off" required>
       </div>
-      <button type="submit" id="submit_btn">Войти</button>
-     
+      <button type="submit" id="submit_btn" class="btn btn-primary">Войти</button>
     </form>
-    
-
-  </div>
-
 </body>
-</html>
+{% endblock %}

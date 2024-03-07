@@ -1,41 +1,38 @@
-<!-- today.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My To-Do List</title>
-    <link href="static/style1.css" rel="stylesheet">
-</head>
+{% extends "base.html" %}
+{% block title %}My To-Do List{% endblock %}
+{% block content %}
 <body>
-    <div class="menu">
-        <div class="menu-item">
-            <div class="dropdown">
-                <button class="menu-button menu-icon"></button>
-                <div class="dropdown-content">
-                    <a class="href-page" href="#">Today</a>
-                    <a class="href-page" href="#">account</a>
-                    <a class="href-page" href="#">Log out</a>
+    <div class="container">
+        <div class="menu d-flex justify-content-between">
+            <div class="menu-item">
+                <div class="dropdown">
+                    <button class="menu-button menu-icon btn btn-secondary"></button>
+                    <div class="dropdown-content">
+                        <a class="href-page" href="#">Today</a>
+                        <a class="href-page" href="#">account</a>
+                        <a class="href-page" href="#">Log out</a>
+                    </div>
                 </div>
             </div>
+            <div class="menu-item"><h1 class="Name-sait">Daily Doer</h1></div>
         </div>
-        <div class="menu-item"><h1 class="Name-sait">Daily Doer</h1></div>
-    </div>
-    <div class="container">
-        <h1 class="text-today">Today</h1>
-        <form id="TaskForm" method="POST">
-            <input type="text" name="checkboxText" id="checkboxText" placeholder="Enter a new task">
-            <button id="btn-task">Add Task</button>
-        </form>
-        
-        <div id="checkboxContainer">
-            {% for task in tasks %}
-                <div class="task-item">
-                    <span>{{ task.task }}</span>
-                    <a href="/delete_task/{{ task.id }}">Delete</a>
-                </div>
-            {% endfor %}
+
+        <div class="container">
+            <h1 class="text-today">Today</h1>
+            <form id="TaskForm" method="POST" class="form-inline">
+                <input type="text" name="checkboxText" id="checkboxText" class="form-control" placeholder="Enter a new task">
+                <button id="btn-task" class="btn btn-primary ml-2">Add Task</button>
+            </form>
+            
+            <div id="checkboxContainer">
+                {% for task in tasks %}
+                    <div class="task-item">
+                        <span>{{ task.task }}</span>
+                        <a href="/delete_task/{{ task.id }}" class="btn btn-danger ml-2">Delete</a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>
-</html>
+{% endblock %}
